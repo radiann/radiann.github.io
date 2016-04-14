@@ -1,3 +1,4 @@
+
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
@@ -12,21 +13,19 @@
   <body>
     <div id="content"></div>
     <script type="text/babel">
-          // tutorial1.js
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        <h1>Comments</h1>
-        <CommentList />
-        <CommentForm />
-      </div>
-    );
-  }
-});
-
-// tutorial2.js
-var CommentList = React.createClass({
+    // tutorial1.js
+    var CommentBox = React.createClass({
+      render: function() {
+        return (
+          <div className="commentBox">
+          <h1>Comments</h1>
+          <CommentList />
+          <CommentForm />
+          </div>
+        );
+      }
+    });
+    var CommentList = React.createClass({
   render: function() {
     return (
       <div className="commentList">
@@ -45,11 +44,10 @@ var CommentForm = React.createClass({
     );
   }
 });
-ReactDOM.render(
-     <CommentBox />,
-     document.getElementById('content')
-   );
-
+    ReactDOM.render(
+      <CommentBox />,
+      document.getElementById('content')
+    );
     </script>
   </body>
 </html>
