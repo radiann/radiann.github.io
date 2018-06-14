@@ -1,74 +1,12 @@
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello React</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
-  </head>
-  <body>
-    <div id="content"></div>
-    <script type="text/babel">
-    // tutorial1.js
-    var CommentBox = React.createClass({
-      render: function() {
-        return (
-          <div className="commentBox">
-          <h1>Comments</h1>
-          <CommentList />
-          <CommentForm />
-          </div>
-        );
-      }
-    });
-    var CommentList = React.createClass({
-  render: function() {
-    return (
-      <div className="commentList">
-      <Comment author="Pete Hunt">This is one comment</Comment>
-      <Comment author="Jordan Walke">This is *another* comment</Comment>
-      </div>
-    );
-  }
-});
+<head>
+  <title>radiann.github.io</title>
+</head>
+<body>
+  <h1>こんにちは!</h1>
 
-var CommentForm = React.createClass({
-  render: function() {
-    return (
-      <div className="commentForm">
-        Hello, world! I am a CommentForm.
-      </div>
-    );
-  }
-});
+ <img src = "saikawa.png" />
 
-// tutorial4.js
-var Comment = React.createClass({
-  rawMarkup: function() {
-  var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
-  return { __html: rawMarkup };
-},
-render: function() {
-  return (
-    <div className="comment">
-      <h2 className="commentAuthor">
-        {this.props.author}
-      </h2>
-      <span dangerouslySetInnerHTML={this.rawMarkup()} />
-    </div>
-  );
-}
-});
-
-    ReactDOM.render(
-      <CommentBox />,
-      document.getElementById('content')
-    );
-    </script>
-  </body>
+</body>
 </html>
